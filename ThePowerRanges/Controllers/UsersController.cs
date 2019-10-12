@@ -77,6 +77,13 @@ namespace ThePowerRanges.Controllers
                     return RedirectToAction(nameof(Index));
 
                 }
+
+                else
+                {
+                    ModelState.Clear();
+                    ModelState.AddModelError("ErrorMessage","Passwords do not match! Try again.");
+                    return View();
+                }
                 
                
             }
