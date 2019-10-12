@@ -15,6 +15,12 @@ namespace ThePowerRanges.Controllers
             return View();
         }
 
+        public IActionResult Education()
+        {
+            return View();
+        }
+
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

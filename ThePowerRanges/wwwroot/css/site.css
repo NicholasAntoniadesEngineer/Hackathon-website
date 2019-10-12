@@ -5,12 +5,53 @@ body {
     padding-right: 0 !important;
     padding-top: 50px;
     padding-bottom: 20px;
-    background: #A8AAAD;
+    background: #969696;
 }
 footer {
     background: #dee2e6;
     height: 50px;
     opacity: 0.6;
+}
+.financialStyle {
+    color: #515658;
+    padding: 0 10px;
+    line-height: 1.2;
+    font-size: 37px;
+    margin-top: 36px;
+    margin-bottom: 20px;
+}
+.infoStyle {
+    text-decoration-line: underline;
+    margin-bottom: 40px;
+}
+.investmentDropDown {
+    position: sticky;
+    padding: 20px;
+    border: none;
+    margin-top: -12px;
+    width: 100%;
+    border-radius: 0;
+    background: gainsboro;
+}
+.investmentOptions {
+    list-style: none;
+}
+.investmentOptions {
+    color: #778286;
+    padding: 0 10px;
+    line-height: 1.2;
+    font-size: 20px;
+    margin-top: 4px;
+    margin-bottom: 14px;
+}
+.investmentButton {
+    text-align: left;
+    padding: 14px;
+    font-size: 30px;
+    margin-top: 12px;
+    margin-bottom: 14px;
+    border: none;
+    width: 100%;
 }
 .alanStyle {
     font-family: none;
@@ -38,7 +79,7 @@ footer {
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    background-color: #9fa2a5;
+    background-color: #caccce;
     padding-top: 24px;
     padding-bottom: 24px;
     padding-left: 46px;
@@ -51,7 +92,18 @@ footer {
 .marginStyle {
     margin-bottom: 60px;
 }
-
+.loginStyle {
+    color: #4a4a4a;
+    font-family: "Roboto slab";
+    font-size: 40px;
+    font-weight: 400;
+}
+.signUpStyle {
+    color: #4a4a4a;
+    font-family: "Roboto slab";
+    font-size: 40px;
+    font-weight: 400;
+}
 /* Carousel */
 .carousel-caption p {
     font-size: 20px;
