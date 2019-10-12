@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <html>
 <head>
     <meta charset="utf-8" />
@@ -16,23 +17,30 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+<body class="container-fluid">
+    <nav class="navbar navbarStyle navbar-fixed-top">
+        <div class="container containerStyle">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ThePowerRanges</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img class="AllanHeadding" src="https://www.allangray.co.za/globalassets/grey_ag_logo-1.svg" >
+                </a>
+                
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Users" asp-action="Index">App</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a class="navFontStyle" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a class="navFontStyle" asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a class="navFontStyle" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="navFontStyle nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Financial Education
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="navFontStyle" href="#">Personal</a></br>
+                            <a class="navFontStyle" href="#">Small Business</a>
+                        </div>
+                    </li>
+                    <li><a class="navFontStyle" asp-area="" asp-controller="Home" asp-action="Contact">Financial Calculator</a></li>
                 </ul>
             </div>
         </div>
@@ -42,9 +50,9 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
         <footer>
-            <p>&copy; 2019 - ThePowerRanges</p>
+            <div class="col-md-offset-2 col-md-9 footerStyle">&copy; 2019 - ThePowerRanges</div>
+            
         </footer>
     </div>
 

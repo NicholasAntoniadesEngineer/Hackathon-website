@@ -1,15 +1,55 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
 body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     padding-top: 50px;
     padding-bottom: 20px;
+    background: #A8AAAD;
 }
-
+footer {
+    background: #dee2e6;
+    height: 50px;
+    opacity: 0.6;
+}
+.alanStyle {
+    font-family: none;
+    font-size: 60px;
+    color: #505050;
+}
+.educationStyle {
+    font-family: none;
+    font-size: 24px;
+}
+.topRowStyle {
+    padding-top: 30px;
+    padding-right: 44px;
+    padding-bottom: 30px;
+    padding-left: 81px;
+    margin-left: -7% !important;
+    margin-right: -7% !important;
+    background: #b5b5b5;
+}
+.youStyle {
+    font-family: none;
+    font-size:60px;
+    color: #c5001f;
+}
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    background-color: #9fa2a5;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 46px;
+    padding-right: 46px;
+    margin-top: 0px;
+}
+.footerStyle {
+    margin-top:16px;
+}
+.marginStyle {
+    margin-bottom: 60px;
 }
 
 /* Carousel */
@@ -27,11 +67,74 @@ body {
 #qrCode {
     margin: 15px;
 }
-
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
+.AllanHeadding {
+    width: 80%;
+}
+.containerStyle {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.navbarStyle {
+    background: #e2e2e2;
+    height: 74px;
+}
+.rowStyle {
+    margin-top: 40px;
+}
+.FontStyle {
+    color: black;
+    font-family: "Roboto slab";
+    font-size: 14px;
+    font-weight: 400;
+}
+.NumberStyle {
+    color: #c5001f;
+    font-family: "Roboto slab";
+    font-size: 18px;
+    font-weight: 400;
+}
+.MapStyle {
+    color: #c5001f;
+    margin: 10px;
+    font-size: 20px;
+    font-family: "Roboto slab";
+    font-weight: 400;
+}
+.navFontStyle {
+    color: #778286;
+    padding: 0 10px;
+    line-height: 1.2;
+    font-size: 16px;
+    margin-top: 4px;
+}
+.contact-form {
+    margin-top: 7px;
+    width: 350px;
+}
+.submitButton {
+    background-color: #ed0025;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: Roboto Slab;
+}
+.aboutText {
+    color: black;
+    font-family: "Roboto slab";
+    font-size: 18px;
+    font-weight: 400;
+}
+.contactFormStyle{
+    margin-bottom:30px;
+}
+.officeStyle {
+    font-weight: 600;
+    font-size: 24px;
+    color: #3d0f16;
+}
+@media only screen and (max-width: 1440px) {
+    .containerStyle {
+        width: 90%;
     }
 }
+/* Hide/rearrange for smaller screens */
