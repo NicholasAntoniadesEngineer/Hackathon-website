@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<ThePowerRanges.Models.Budget>
 
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -34,11 +35,12 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+	@foreach (var item in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.ExpensesTotal)
             </td>
+			
             <td>
                 @Html.DisplayFor(modelItem => item.Debt)
             </td>
@@ -59,7 +61,10 @@
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
+
         </tr>
-}
+		
+		
+		}
     </tbody>
 </table>

@@ -10,13 +10,17 @@ namespace ThePowerRanges.Models
     {
 
         public int Id { get; set; }
-        private Dictionary<string, double> Expenses {get; set;}
+        private Dictionary<string, int> Expenses {get; set;}
+        public List<string> Keys { get; set; }
+        public List<int> Amounts { get; set; }
         public ExpenseCollection()
         {
-            Expenses = new Dictionary<string, double>();
+            Expenses = new Dictionary<string, int>();
+            Keys = new List<string>();
+            Amounts = new List<int>();
         }
 
-        public void AddExpense(string expenseName, double amount)
+        public void AddExpense(string expenseName, int amount)
         {
 
             Expenses.Add(expenseName, amount);
@@ -28,6 +32,26 @@ namespace ThePowerRanges.Models
 
             Expenses.Remove(expenseName);
 
+        }
+
+        public void Extract()
+        {
+            
+            foreach(var pair in Expenses)
+            {
+                Keys.Add(pair.Key);
+                Amounts.Add(pair.Value);
+            }
+        }
+
+        public List<string> getKeys()
+        {
+            return Keys;
+        }
+
+        public List<int> getAmounts()
+        {
+            return Amounts;
         }
 
         // edit expense code here

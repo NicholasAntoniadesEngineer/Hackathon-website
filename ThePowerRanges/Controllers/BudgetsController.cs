@@ -79,6 +79,8 @@ namespace ThePowerRanges.Controllers
                 {
                     expensesCollection.AddExpense(budgetBindingModel.Expenses[i], budgetBindingModel.Amounts[i]);
                 }
+                expensesCollection.AddExpense("test",5);
+                //expensesCollection.getKeys().ToString;
                 budget.Expenses = expensesCollection;
 
 
