@@ -4,13 +4,15 @@
 // Write your JavaScript code.
 
 
+var count=1
 
 function createNewElement()
 {
-
+    
     var newInput= document.createElement('div');
 
-    newInput.innerHTML = "Expense:" + "<br>" + "<input type='text' id='newExpense'>" + "<br>" + "Amount(R):" + "<br>"+ "<input type='text' id='newExpense'>"+ "<hr>";
+    newInput.innerHTML = "Expense:" + "<br>" + "<input type='text' id='newExpense_" + count + "'>" + "<br>" + "Amount:" + "<br>" + "R<input type='text' id='newExpense_" + count + "'>" + "<hr>";
+    count = count + 1;
 
     document.getElementById("newExpense").appendChild(newInput);
 
