@@ -4,57 +4,41 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
-
+<h2>User Details</h2>
+</br>
 <div>
-    <h4>User</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Surname)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Surname)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Password)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.DateOfBirth)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.DateOfBirth)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.AccountType)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.AccountType)
-        </dd>
-    </dl>
+    <ul class="detailsStyle">
+        <li>
+            <div class="col-md-2">@Html.DisplayNameFor(model => model.Name) :</div>
+            <div class="col-md-10">@Html.DisplayFor(model => model.Name)</div> 
+        </li>
+        <li>
+            <div class="col-md-2"> @Html.DisplayNameFor(model => model.Surname) :</div>
+            <div class="col-md-10">@Html.DisplayFor(model => model.Surname)</div>
+        </li>
+        <li>
+            <div class="col-md-2">@Html.DisplayNameFor(model => model.Email) :</div>
+            <div class="col-md-10">@Html.DisplayFor(model => model.Email)</div>
+        </li>
+        <li>
+            <div class="col-md-2">@Html.DisplayNameFor(model => model.PhoneNumber) : </div>
+            <div class="col-md-10">@Html.DisplayFor(model => model.PhoneNumber)</div>
+        </li>
+        <li>
+            <div class="col-md-2">@Html.DisplayNameFor(model => model.Password) :</div>
+            <div class="col-md-10">@Html.DisplayFor(model => model.Password)</div>
+        </li>
+        <li>
+            <div class="col-md-2">@Html.DisplayNameFor(model => model.DateOfBirth) :</div>
+            <div class="col-md-10">@Html.DisplayFor(model => model.DateOfBirth)</div>
+        </li>
+        <li>
+            <div class="col-md-2">@Html.DisplayNameFor(model => model.AccountType) :</div>
+            <div class="col-md-10">@Html.DisplayFor(model => model.AccountType)</div>
+        </li>
+    </ul>
 </div>
-<div>
+<div class="backStyle">
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

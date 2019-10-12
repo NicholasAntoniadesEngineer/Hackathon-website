@@ -3,7 +3,6 @@
 
 // Write your JavaScript code.
 
-
 google.charts.load('current', { 'packages': ['corechart'] });
 function drawChart() {
     Expenses = parseInt(document.getElementById('Expensesvar').value);
