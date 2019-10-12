@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ThePowerRanges.Models;
 
 namespace ThePowerRanges.Migrations
 {
     [DbContext(typeof(DBContext))]
-    partial class DBContextModelSnapshot : ModelSnapshot
+    [Migration("20191012183327_UpdateBudgetTable")]
+    partial class UpdateBudgetTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,19 +27,19 @@ namespace ThePowerRanges.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Debt");
+                    b.Property<double>("Debt");
 
                     b.Property<int?>("ExpensesId");
 
-                    b.Property<int>("ExpensesTotal");
+                    b.Property<double>("ExpensesTotal");
 
-                    b.Property<int>("Income");
+                    b.Property<double>("Income");
 
-                    b.Property<int>("Month");
+                    b.Property<string>("Month");
 
-                    b.Property<int>("Save");
+                    b.Property<double>("Save");
 
-                    b.Property<int>("TaxPercentage");
+                    b.Property<double>("TaxPercentage");
 
                     b.HasKey("Id");
 

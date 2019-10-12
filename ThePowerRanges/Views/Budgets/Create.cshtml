@@ -1,4 +1,4 @@
-﻿@model ThePowerRanges.Models.Budget
+﻿@model ThePowerRanges.Models.BudgetBindingModel;
 
 @{
     ViewData["Title"] = "Create";
@@ -22,9 +22,9 @@
 			</div>
 
             <div class="form-group">
-                <label asp-for="ExpensesTotal" class="control-label"></label>
-                <input asp-for="ExpensesTotal" class="form-control" />
-                <span asp-validation-for="ExpensesTotal" class="text-danger"></span>
+                <label asp-for="Total" class="control-label"></label>
+                <input asp-for="Total" class="form-control" />
+                <span asp-validation-for="Total" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Debt" class="control-label"></label>
@@ -42,13 +42,13 @@
                 <span asp-validation-for="Save" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TaxPercentage" class="control-label"></label>
-                <input asp-for="TaxPercentage" class="form-control" />
-                <span asp-validation-for="TaxPercentage" class="text-danger"></span>
+                <label asp-for="Tax" class="control-label"></label>
+                <input asp-for="Tax" class="form-control" />
+                <span asp-validation-for="Tax" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Month" class="control-label"></label>
-                <input asp-for="Month" class="form-control" />
+                <input asp-for="Month" type="date" class="form-control" />
                 <span asp-validation-for="Month" class="text-danger"></span>
             </div>
             <div class="form-group">

@@ -12,12 +12,14 @@ namespace ThePowerRanges.Models
         [Key]
         public int Id {get; set;}
         public ExpenseCollection Expenses { get; set; }
-        public double ExpensesTotal { get; set; }
-        public double Debt { get; set; }
-        public double Income { get; set; }
-        public double Save { get; set; }
-        public double TaxPercentage { get; set; }
-        public DateTime Month { get; set; }
+        public int ExpensesTotal { get; set; }
+        public int Debt { get; set; }
+        public  int Income { get; set; }
+        public int  Save { get; set; }
+        public int TaxPercentage { get; set; }
+        public int Month { get; set; }
+
+        public Budget() { }
 
     }
 }

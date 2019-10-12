@@ -4,14 +4,14 @@
 // Write your JavaScript code.
 
 
-var count=1
+var count=0
 
 function createNewElement()
 {
     
     var newInput= document.createElement('div');
 
-    newInput.innerHTML = "Expense:" + "<br>" + "<input type='text' id='newExpense_" + count + "'>" + "<br>" + "Amount:" + "<br>" + "R<input type='text' id='newExpense_" + count + "'>" + "<hr>";
+    newInput.innerHTML = "Expense:" + "<br>" + "<input type='text' asp-for='Expenses[" + count + "]'>" + "<br>" + "Amount:" + "<br>" + "R<input type='text' asp-for='Amounts[" + count + "]'>" + "<hr>";
     count = count + 1;
 
     document.getElementById("newExpense").appendChild(newInput);
