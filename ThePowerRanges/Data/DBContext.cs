@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using ThePowerRanges.Models;
 
 namespace ThePowerRanges.Models
 {
@@ -14,5 +15,7 @@ namespace ThePowerRanges.Models
         }
 
         public DbSet<ThePowerRanges.Models.User> User { get; set; }
+
+        public DbSet<ThePowerRanges.Models.Budget> Budget { get; set; }
     }
 }
