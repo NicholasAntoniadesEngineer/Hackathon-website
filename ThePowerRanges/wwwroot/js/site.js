@@ -10,14 +10,26 @@ function drawChart() {
     Debt = parseInt(document.getElementById('Debtvar').value);
     Savings = parseInt(document.getElementById('Savingsvar').value);
 
-
+    var data = google.visualization.arrayToDataTable([
+        ['Budget', 'Pie Chart'],
+        ['Expenses', Expenses],
+        ['Income', Income],
+        ['Debt', Debt],
+        ['Savings', Savings],
+    ]);
+    var options = {
+        title: 'Budget Pie Chart'
+    };
+    //the id is the DOM location to draw the chart
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+}
 function createNewElement()
 {
-    
+
     var newInput= document.createElement('div');
 
-    newInput.innerHTML = "Expense:" + "<br>" + "<input type='text' asp-for='Expenses[" + count + "]'>" + "<br>" + "Amount:" + "<br>" + "R<input type='text' asp-for='Amounts[" + count + "]'>" + "<hr>";
-    count = count + 1;
+    newInput.innerHTML = "Expense:" + "<br>" + "<input type='text' id='newExpense'>" + "<br>" + "Amount(R):" + "<br>"+ "<input type='text' id='newExpense'>"+ "<hr>";
 
     document.getElementById("newExpense").appendChild(newInput);
 

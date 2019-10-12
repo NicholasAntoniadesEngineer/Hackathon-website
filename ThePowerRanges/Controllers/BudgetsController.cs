@@ -49,6 +49,10 @@ namespace ThePowerRanges.Controllers
         {
             return View();
         }
+        public IActionResult piechart()
+        {
+            return View();
+        }
 
         // POST: Budgets/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 

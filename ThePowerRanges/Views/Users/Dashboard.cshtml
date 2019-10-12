@@ -4,8 +4,29 @@
 }
 
     <div class="row">
-        <div class="col-md-12">
-            <button class="investmentButton dropdown-toggle" type="button" data-toggle="dropdown">Budget Plan</button>
+
+        <div class="dropdown col-md-12">
+            <button class="investmentButton dropdown-toggle" type="button" data-toggle="dropdown">Budget Planner</button>
+            <ul class="dropdown-menu investmentDropDown" >
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                <h2>Budget Pie Chart</h2>
+                <div class="row pieRow">
+                    <div class="col-md-4">
+                        <p>What is your monthly budget?</p>
+                        <form id="form1" onsubmit="drawChart(); return false">
+                            <label for="Expensesvar">Expenses: </label><input type="text" id="Expensesvar"><br>
+                            <label for="Incomevar">Income: </label><input type="text" id="Incomevar"><br>
+                            <label for="Debtvar">Debt: </label><input type="text" id="Debtvar"><br>
+                            <label for="Savingsvar">Savings: </label><input type="text" id="Savingsvar"><br>
+
+                            <button type="submit" value="Submit" class="pieButton">Create Chart</button>
+                        </form>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="piechart"></div>
+                    </div>
+                </div>
+            </ul>
         </div>
 
         <div class="dropdown col-md-12">

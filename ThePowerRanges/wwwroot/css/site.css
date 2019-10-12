@@ -12,6 +12,14 @@ footer {
     height: 50px;
     opacity: 0.6;
 }
+#piechart {
+
+    height: 400px;
+}
+.pieRow {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 .financialStyle {
     color: #515658;
     padding: 0 10px;
@@ -20,9 +28,47 @@ footer {
     margin-top: 36px;
     margin-bottom: 20px;
 }
+.pieButton {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 268px !important;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: Roboto Slab;
+}
 .infoStyle {
     text-decoration-line: underline;
     margin-bottom: 40px;
+}
+label {
+    display: inline-block;
+    width: 100px;
+}
+.contactStyle {
+    margin-top: 30px;
+}
+.backStyle{
+    font-size:20px;
+}
+.menuSelectStyle{
+    text-align:center;
+}
+.landingImage{
+    width:100%;
+    margin-bottom:50px;
+}
+.selectButtonStyle {
+    margin-right: 30px;
+    width: 204px;
+    height: 51px;
+    border: none;
+    margin-bottom: 97px;
+    background: #e8e8e8;
+}
+.detailsStyle {
+    font-size: 20px;
+    height: 220px;
+    list-style: none;
 }
 .investmentDropDown {
     position: sticky;
@@ -35,6 +81,16 @@ footer {
 }
 .investmentOptions {
     list-style: none;
+}
+.individualStyle {
+    list-style: none;
+    margin: 0 !important;
+    padding-left: 10px;
+}
+.businessStyle {
+    list-style: none;
+    margin: 0 !important;
+    padding-left: 10px;
 }
 .investmentOptions {
     color: #778286;
