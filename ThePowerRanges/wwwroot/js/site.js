@@ -24,13 +24,14 @@ function drawChart() {
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);
 }
+var count = 0;
 function createNewElement()
 {
 
     var newInput= document.createElement('div');
 
-    newInput.innerHTML = "Expense:" + "<br>" + "<input type='text' id='newExpense'>" + "<br>" + "Amount(R):" + "<br>"+ "<input type='text' id='newExpense'>"+ "<hr>";
-
+    newInput.innerHTML = "Expense:" + "<br>" + "<input type='text' asp-for='Expenses[" + count + "]'>" + "<br>" + "Amount:" + "<br>" + "R<input type='text' asp-for='Amounts[" + count + "]'>" + "<hr>";
+    count = count + 1;
     document.getElementById("newExpense").appendChild(newInput);
 
 
