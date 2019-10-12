@@ -3,8 +3,13 @@
 
 // Write your JavaScript code.
 
+google.charts.load('current', { 'packages': ['corechart'] });
+function drawChart() {
+    Expenses = parseInt(document.getElementById('Expensesvar').value);
+    Income = parseInt(document.getElementById('Incomevar').value);
+    Debt = parseInt(document.getElementById('Debtvar').value);
+    Savings = parseInt(document.getElementById('Savingsvar').value);
 
-var count=0
 
 function createNewElement()
 {
