@@ -4,7 +4,27 @@
 // Write your JavaScript code.
 
 
+google.charts.load('current', { 'packages': ['corechart'] });
+function drawChart() {
+    Expenses = parseInt(document.getElementById('Expensesvar').value);
+    Income = parseInt(document.getElementById('Incomevar').value);
+    Debt = parseInt(document.getElementById('Debtvar').value);
+    Savings = parseInt(document.getElementById('Savingsvar').value);
 
+    var data = google.visualization.arrayToDataTable([
+        ['Budget', 'Pie Chart'],
+        ['Expenses', Expenses],
+        ['Income', Income],
+        ['Debt', Debt],
+        ['Savings', Savings],
+    ]);
+    var options = {
+        title: 'Budget Pie Chart'
+    };
+    //the id is the DOM location to draw the chart
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+}
 function createNewElement()
 {
 
