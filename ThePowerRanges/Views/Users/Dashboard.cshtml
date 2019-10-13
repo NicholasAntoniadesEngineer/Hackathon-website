@@ -30,10 +30,30 @@
         </div>
 
         <div class="dropdown col-md-12">
-            <button class="investmentButton dropdown-toggle" type="button" data-toggle="dropdown">Debt Calculator</button>
-            <ul class="dropdown-menu investmentDropDown">
-            </ul>
-        </div>
+        <button class="investmentButton dropdown-toggle" type="button" data-toggle="dropdown">Debt Calculator</button>
+        <ul class="dropdown-menu investmentDropDown">
+            <div class="col-md-6">
+                <h2>Simple Interest</h2>
+                <form>
+                    <div class="col-md-5">Total Debt : </div><div class="col-md-7"><input type="text" id="firstNumber" /></div><br>
+                    <div class="col-md-5">Payment Period (Yearly): </div><div class="col-md-7"><input type="text" id="secondNumber" /></div><br>
+                    <div class="col-md-5">Interest: </div><div class="col-md-7"><input type="text" id="thirdNumber" /></div><br>
+                    <div class="col-md-12"><input type="button" onclick="simpleInterest()" Value="Calculate" /></div><br>
+                </form>
+                <div class="col-md-12"><br><p>Monthly payment : <span id="result"></span><br></p></div>
+            </div>
+            <div class="col-md-6">
+                <h2>Compund Interest</h2>
+                <form>
+                    <div class="col-md-5">Total Debt : </div><div class="col-md-7"><input type="text" id="firstNumberC" /></div><br>
+                    <div class="col-md-5">Payment Period (Yearly): </div><div class="col-md-7"><input type="text" id="secondNumberC" /></div><br>
+                    <div class="col-md-5">Interest: </div><div class="col-md-7"><input type="text" id="thirdNumberC" /></div><br>
+                    <div class="col-md-12"><input type="button" onclick="compoundInterest()" Value="Calculate" /></div><br>
+                </form>
+                <div class="col-md-12"><br><p>Monthly payment : <span id="compoundresult"></span><br></p></div>
+            </div>
+        </ul>
+    </div>
 
         <div class="dropdown col-md-12">
             <button class="investmentButton dropdown-toggle" type="button" data-toggle="dropdown">Investment</button>
