@@ -73,7 +73,8 @@ namespace ThePowerRanges.Controllers
                 var budget = new Budget();
                 var total = 0;
 
-                var keys =;
+                var list_keys = new string[3] {"Rent","Food","Clothing" };
+                var list_amounts = new int[3] { 4000,2000,500};
                
                 budget.Debt = budgetBindingModel.Debt;
                 budget.Income = budgetBindingModel.Income;
@@ -81,16 +82,19 @@ namespace ThePowerRanges.Controllers
                 budget.TaxPercentage = budgetBindingModel.Tax;
                 budget.Month = budgetBindingModel.Month;
 
-                var expensesCollection = new ExpenseCollection();
-                for (int i = 0; i < budgetBindingModel.Expenses.Count; i++)
+                var ex = new ExpenseCollection();
+                for (int i = 0; i < list_amounts.Length; i++)
                 {
-                    expensesCollection.AddExpense(budgetBindingModel.Expenses[i], budgetBindingModel.Amounts[i]);
-                    total++;
+                    
+                    ex.AddExpense(list_keys[i], list_amounts[i]);
+                    total += list_amounts[i];
+                    
 
                 }
 
-                budget.ExpensesTotal = total;
-                budget.Expenses = expensesCollection;
+                budget.Expenses = ex;
+                budget.ExpensesTotal = total ;
+                
 
 
                 _context.Add(budget);
