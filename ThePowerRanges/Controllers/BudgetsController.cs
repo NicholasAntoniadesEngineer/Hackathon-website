@@ -59,7 +59,7 @@ namespace ThePowerRanges.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Amounts,Expenses,Total,Debt,Income,Save,Tax")] BudgetBindingModel budgetBindingModel)
+        public async Task<IActionResult> Create([Bind("Amounts,Expenses,Debt,Income,Save,Tax")] BudgetBindingModel budgetBindingModel)
         {
 
             
@@ -71,7 +71,10 @@ namespace ThePowerRanges.Controllers
             if (ModelState.IsValid)
             {
                 var budget = new Budget();
-                budget.ExpensesTotal = budgetBindingModel.Total;
+                var total = 0;
+
+                var keys =;
+               
                 budget.Debt = budgetBindingModel.Debt;
                 budget.Income = budgetBindingModel.Income;
                 budget.Save = budgetBindingModel.Save;
@@ -82,9 +85,11 @@ namespace ThePowerRanges.Controllers
                 for (int i = 0; i < budgetBindingModel.Expenses.Count; i++)
                 {
                     expensesCollection.AddExpense(budgetBindingModel.Expenses[i], budgetBindingModel.Amounts[i]);
+                    total++;
+
                 }
-                expensesCollection.AddExpense("test",5);
-                //expensesCollection.getKeys().ToString;
+
+                budget.ExpensesTotal = total;
                 budget.Expenses = expensesCollection;
 
 
@@ -97,6 +102,7 @@ namespace ThePowerRanges.Controllers
 
         }
 
+ 
         // GET: Budgets/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {

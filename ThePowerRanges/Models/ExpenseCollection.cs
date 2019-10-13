@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,49 +10,47 @@ namespace ThePowerRanges.Models
     public class ExpenseCollection
     {
 
+
         public int Id { get; set; }
-        private Dictionary<string, int> Expenses {get; set;}
-        public List<string> Keys { get; set; }
-        public List<int> Amounts { get; set; }
+     
+        private  Keys Keys_ { get; set; }
+        private   Amounts Amounts_ { get; set; }
         public ExpenseCollection()
         {
-            Expenses = new Dictionary<string, int>();
-            Keys = new List<string>();
-            Amounts = new List<int>();
+
+            Keys_ = new Keys();
+            Amounts_ = new Amounts();
+
         }
 
         public void AddExpense(string expenseName, int amount)
         {
 
-            Expenses.Add(expenseName, amount);
+            Keys_.putKey(expenseName);
+            Amounts_.putAmount(amount);
 
         }
 
-        public void RemoveExpense(string expenseName, double amount)
+        public void RemoveExpense(string expenseName, int amount)
         {
 
-            Expenses.Remove(expenseName);
+            Keys_.removeKey(expenseName);
 
         }
 
-        public void Extract()
+        public string getKey(int index)
         {
-            
-            foreach(var pair in Expenses)
-            {
-                Keys.Add(pair.Key);
-                Amounts.Add(pair.Value);
-            }
+            return Keys_.getKey(index);
         }
 
-        public List<string> getKeys()
+        public int  getAmount(int index)
         {
-            return Keys;
+            return Amounts_.getAmount(index);
         }
 
-        public List<int> getAmounts()
+        public int getSize()
         {
-            return Amounts;
+            return Keys_.getSize();
         }
 
         // edit expense code here

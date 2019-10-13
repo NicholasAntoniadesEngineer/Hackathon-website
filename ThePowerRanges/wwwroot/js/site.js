@@ -30,12 +30,15 @@ function createNewElement()
 
     var newInput= document.createElement('div');
 
-    newInput.innerHTML = "Expense:" + "<br>" + "<input type='text' asp-for='Expenses[" + count + "]'>" + "<br>" + "Amount:" + "<br>" + "R<input type='text' asp-for='Amounts[" + count + "]'>" + "<hr>";
+    newInput.innerHTML = "Expense:" + "<br>" + "<input type='text' asp-route-id='Keys'>" + "<br>" + "Amount:" + "<br>" + "R <input type='text' asp-route-id='Amounts'>" + "<hr>";
     count = count + 1;
     document.getElementById("newExpense").appendChild(newInput);
 
 
 }
 
-function removeElement()
-{ }
+function addLists()
+{
+    var keys = [];
+
+}

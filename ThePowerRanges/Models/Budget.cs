@@ -12,7 +12,7 @@ namespace ThePowerRanges.Models
 
         [Key]
         public int Id {get; set;}
-
+     
         public ExpenseCollection Expenses { get; set; }
         public int ExpensesTotal { get; set; }
         public int Debt { get; set; }
